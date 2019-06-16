@@ -11,7 +11,7 @@ public interface RegisterFunctionaryRemote {
 		public Product GetProdByID(int id);
 		
 		public void RegisterBoss(String login, String password);
-		public void RegisterFunc(String login, String password);
+		public void RegisterFunc(String login, String password, String name);
 		public void RegisterProd(String productName, String category, int quantity, float value);
 		public void RemoveProd(int id, String name);
 		public void RemoveFunc(int id, String name);

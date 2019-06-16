@@ -29,11 +29,12 @@ public class RegisterFunctionaryBean implements RegisterFunctionaryRemote {
 	}
 
 	@Override
-	public void RegisterFunc(String login, String password) {
+	public void RegisterFunc(String login, String password, String name) {
 		Functionary func = new Functionary();
 		func.setIdFunc(ListOfFuncs().size() + 1);
 		func.setLogin(login);
 		func.setPassword(password);
+		func.setName(name);
 	}
 
 	@Override

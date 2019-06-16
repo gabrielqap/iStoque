@@ -2,6 +2,8 @@ package iStoqueDomain;
 
 public class Functionary {
 	private int idFunc;
+	
+	private String name;
 	private String login;
 	private String password;
 	
@@ -22,6 +24,12 @@ public class Functionary {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 }
