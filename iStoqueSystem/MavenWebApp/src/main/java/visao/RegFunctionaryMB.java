@@ -2,8 +2,9 @@ package visao;
 
 import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
-import javax.inject.Named;
 import javax.inject.Inject;
+import javax.inject.Named;
+
 import iStoqueBusiness.RegisterFunctionaryRemote;
 
 import javax.ejb.EJB;
@@ -13,14 +14,14 @@ import javax.ejb.EJB;
 public class RegFunctionaryMB {
 	private String loginFunc;
 	private String passFunc;
-	private String nameFunc;
+	private String emailFunc;
 	
 	
 	@EJB
 	private RegisterFunctionaryRemote ejb;
 	
 	public String RegFunc() {
-		ejb.RegisterFunc(loginFunc, passFunc, nameFunc);
+		ejb.RegisterFunc(loginFunc, passFunc, emailFunc);
 		return "principal";
 	}
 	
@@ -37,11 +38,11 @@ public class RegFunctionaryMB {
 	public void setPassFunc(String passFunc) {
 		this.passFunc = passFunc;
 	}
-	public String getNameFunc() {
-		return nameFunc == null ? "" : nameFunc;
+	public String getemailFunc() {
+		return emailFunc == null ? "" : emailFunc;
 	}
-	public void setNameFunc(String nameFunc) {
-		this.nameFunc = nameFunc;
+	public void setemailFunc(String emailFunc) {
+		this.emailFunc = emailFunc;
 	}
 	
 	

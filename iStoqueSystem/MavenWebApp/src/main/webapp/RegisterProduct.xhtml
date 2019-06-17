@@ -29,34 +29,23 @@
 <body>
 	<b:navBar brand="iStoque" brandHref="principal.xhtml" inverse="true">
   	<b:navbarLinks>
-  		<b:navLink value="Listar Produtos" href="EmployeeList.xhtml"></b:navLink>
-	    <b:navLink value="Cadastrar Funcionario" href="RegisterFunctionary.xhtml"></b:navLink>
-	    <b:navLink value="Cadastrar Produto" href="RegisterProduct.xhtml"></b:navLink>
-	    
-	    
-	    <b:navLink value="Remover Funcionario" href="RegisterNurse.xhtml"></b:navLink>
-  		<b:navLink value="Remover Produto" href="RegisterNurse.xhtml"></b:navLink>
-	  	<b:navLink value="Editar Produto" href="RegisterNurse.xhtml"></b:navLink>
-	  	<b:navLink value="Editar Produto" href="RegisterNurse.xhtml"></b:navLink> 
+  		<b:navLink value="Listar Produtos" href="ProductList.xhtml"></b:navLink>
+  		<b:navLink value="Listar Funcionarios" href="FunctionaryList.xhtml"></b:navLink>
+	    <b:navLink value="Cadastrar Funcionario" href="RegisterFunctionary.xhtml"></b:navLink>   	    
+  		<b:navLink value="Cadastrar Produto" href="RegisterProduct.xhtml"></b:navLink>  	  
   	</b:navbarLinks>
 	</b:navBar>
 	<b:container class="painel" layout="fluid">
 	
 	<b:form>
 		<b:row>  
-	    <b:inputText span="2" placeholder="Type the category of the product" label="product Name" value="#{regFunctionaryMB.nameFunc}" />
-	   </b:row>
-		
-		<b:row>
-			<b:inputText span="2" placeholder="Type his login" label="login" value="#{regFunctionaryMB.loginFunc}"/>
-	   </b:row>
-		<b:row>
-			<b:inputSecret span="2" id="password" fieldId="j_password" name="j_password"
-                 value="#{regFunctionaryMB.passFunc}"
-                 label="Senha" />
+	    <b:inputText span="2" placeholder="Nome" label="Nome" value="#{registerProduct.pNome}" />
+	    <b:inputText span="2" placeholder="Categoria" label="Categoria" value="#{registerProduct.Category}"/>
+	    <b:inputText span="2" placeholder="Quantidade" label="Quantidade" value="#{registerProduct.Quantity}" />
+	    <b:inputText span="2" placeholder="Valor" label="Valor" value="#{registerProduct.Value}" />
 		</b:row>
 		
-		<b:commandButton value="Cadastrar" action="#{regFunctionaryMB.RegFunc()}" update="@form" look="primary" style="width:80px, padding:10px"/>
+		<b:commandButton value="Cadastrar" action="#{registerEmployeeMB.registerEmployeeType(1)}" update="@form" look="primary" style="width:80px, padding:10px"/>
 		
 	</b:form>
 

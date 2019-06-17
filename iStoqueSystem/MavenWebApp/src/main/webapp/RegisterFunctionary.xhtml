@@ -5,7 +5,7 @@
       xmlns:f="http://java.sun.com/jsf/core">
       
 		<h:head>
-		<title>Register Product</title>
+		<title>Register Functionary</title>
 		
 		<style type="text/css">
 			body {
@@ -29,29 +29,25 @@
 <body>
 	<b:navBar brand="iStoque" brandHref="principal.xhtml" inverse="true">
   	<b:navbarLinks>
-  		<b:navLink value="Listar Produtos" href="EmployeeList.xhtml"></b:navLink>
-	    <b:navLink value="Cadastrar Funcionario" href="RegisterFunctionary.xhtml"></b:navLink>
-	    
-	    
-	    <b:navLink value="Cadastrar Funcionario" href="RegisterDoctor.xhtml"></b:navLink>
-	    <b:navLink value="Remover Funcionario" href="RegisterNurse.xhtml"></b:navLink>
-  		<b:navLink value="Remover Produto" href="RegisterNurse.xhtml"></b:navLink>
-	  	<b:navLink value="Editar Produto" href="RegisterNurse.xhtml"></b:navLink>
-	  	<b:navLink value="Editar Produto" href="RegisterNurse.xhtml"></b:navLink> 
+  		<b:navLink value="Listar Produtos" href="ProductList.xhtml"></b:navLink>
+  		<b:navLink value="Listar Funcionarios" href="FunctionaryList.xhtml"></b:navLink>
+	    <b:navLink value="Cadastrar Funcionario" href="RegisterFunctionary.xhtml"></b:navLink>   	    
+  		<b:navLink value="Cadastrar Produto" href="RegisterProduct.xhtml"></b:navLink>  	  
   	</b:navbarLinks>
 	</b:navBar>
+	
 	<b:container class="painel" layout="fluid">
 	
 	<b:form>
 		<b:row>  
-	    <b:inputText span="2" placeholder="Type the name of the Functionary" label="Functionary Name" value="#{RegFunctionaryMB.nameFunc}" />
+	    <b:inputText span="2" placeholder="Nome do funcionário" style = "width: 100%;" label="Nome de usuário do funcionário" value="#{RegFunctionaryMB.loginFunc}" />
 	   </b:row>
 		
 		<b:row>
-			<b:inputText span="2" placeholder="Type his login" label="login" value="#{RegFunctionaryMB.loginFunc}"/>
+			<b:inputText span="2" placeholder="Email" label="Email" value="#{RegFunctionaryMB.emailFunc}"/>
 	   </b:row>
 		<b:row>
-			<b:inputSecret span="2" id="password" fieldId="j_password" name="j_password"
+			<b:inputSecret span="2" placeholder="Senha"  id="password" fieldId="j_password" name="j_password"
                  value="#{RegFunctionaryMB.passFunc}"
                  label="Senha" />
 		</b:row>
