@@ -1,2 +1,2 @@
-# MedSystem
+# iStoque
 Projeto de Web2
