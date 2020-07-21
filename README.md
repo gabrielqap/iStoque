@@ -1,2 +1,2 @@
 # iStoque
-Big shit.
+Projeto para gerenciamento de estoque de armazém
